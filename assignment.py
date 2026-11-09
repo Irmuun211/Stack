@@ -53,6 +53,11 @@ def Size():
 # Exercise 5
 
 def ReverseWord(Word):
+    global TopOfStack
+    TopOfStack = -1
+    global Stack
+    for x in range(10):
+        Stack.append(-1)
     for char in Word:
         Push(char)
     s = ""
