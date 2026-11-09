@@ -53,16 +53,9 @@ def Size():
 # Exercise 5
 
 def ReverseWord(Word):
-    Stack = []
-    TopOfStack = -1
-    for x in range(10):
-        Stack.append(-1)
-    for i in Word:
-        TopOfStack += 1
-        Stack[TopOfStack] = i
+    for char in Word:
+        Push(char)
     s = ""
-    while TopOfStack != -1:
-        s = s + str(Stack[TopOfStack])
-        TopOfStack -= 1
+    while not IsEmpty():
+        s += str(Pop())
     return s
-
